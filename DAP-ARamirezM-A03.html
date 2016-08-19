@@ -1,0 +1,143 @@
+<html>
+	<head>
+	<meta charset="utf-8"><!--declaración del conjunto de caracteres que se va a utilizar en el texto-->
+	<title>Formulario </title>
+	
+	<style type = "text/css">
+			em {font-family: century gothic;
+				font-weight:bold;
+				text-align:center;
+				color:#8A0808;}
+			h1 {font-family: century gothic, helvetica, sans-serif;
+				font-size:35pt;
+				text-align:center;
+				color:#8A0808}
+			
+			p  {font-size:15pt;
+				font-family: arial, sans-serif;
+				}
+			.especial {color: #088A4B;
+					   text-align: center;
+					   font-family: helvetica, arial, sans-serif}
+					   
+			input {font-family: arial, sans-serif;
+					font-size:15pt;
+					color: #08298A;
+					border-color: black;}
+					
+			table {font-family: arial, sans-serif;
+					font-size: 15pt;
+					border-width: 5pt;
+					border-style:solid;
+					}
+			select {font-family: arial, sans-serif;
+					font-size: 15pt;}
+		</style>
+	
+	</head>
+	<body>
+	<!-- inicio del cuerpo del documento, inicio del formulario, se indica el método de 
+	recuperación de datos, a donde enviarlos, etc.-->
+	<!-- el tag <method> nos indica el método en que se enviaran los datos y action	el lugar o página en donde se guardará y redireccionará.
+	POST= envía los datos de forma oculta, es decir no aparecen en la URL
+	GET= cuando se envian los datos estos aparecen en la URL-->
+		<h1>Solicitud de Empleo</h1>
+		<h2 class="especial">Nota: La información aquí proporcionada será tratada confidencialmente</h2></br>
+	<form method="post" action="itesm.mx">
+	<!-- el input type text es un elemento para intoducir texto en el formulario
+	el input type date es para introducir fechas-->
+	<p>
+		<label>Fecha: <input name="Fecha" type="date" size="30"></label><br><br/>
+		<label>Puesto que solicita y turno de su interés: <input name="pyt" type="text" size="50"></label><br><br/>
+		<label>Sueldo mensual: <input name="sueldo" type="text" size="10" maxlenght="10"></label><br><br/>
+		<em>DATOS PERSONALES</em><br></br>
+		<label>Apellido Paterno: <input name="aPaterno" type="text" size="25" maxlenght="30"></label><br><br/>
+		<label>Apellido Materno: <input name="aMaterno" type="text" size="25" maxlenght="30"></label><br><br/>
+		<label>Nombre(s): <input name="nombres" type="text" size="30" maxlenght="30"></label><br><br/>
+		<label>Edad: <input name="edad" type="number" size="2" maxlenght="2"></label><br><br/>
+		<label>Estatura: <input name="estatura" type="number" size="5" maxlenght="5"></label><br><br/>
+		<label>Peso <input name="peso" type="number" size="5" maxlenght="5"></label><br><br/>
+		<label>Estado civil <select name="eCivil">
+							<option value="soltero">Soltero</option>
+							<option value="casado">Casado</option>
+							<option value="divorciado">Divorciado</option>
+							</select><br><br/> <!-- Lista despegable con opciones-->
+		<label>Dirección <input name="direccion" type="text" size="50" maxlenght="50"></label><br><br/>
+		<label>Código Postal <input name="cPostal" type="text" size="6" maxlenght="6"></label><br><br/>
+		<label>Teléfono casa <input name="tCasa" type="text" size="10" maxlenght="10"></label><br><br/>
+		<label>Teléfono móvil <input name="tMovil" type="text" size="10" maxlenght="10"></label><br><br/>
+		<label>Sexo: <input type="radio" name="sexo" value="f">Femenino
+		<input type="radio" name="sexo" value="m">Masculino</label><br><br/>
+		<label>Lugar de Nacimiento <input name="lNacimiento" type="text" size="10" maxlenght="10"></label><br><br/>
+		<label>Vive con: <input type="radio" name="viveCon" value="padres" checked>Sus Padres
+		<input type="radio" name="viveCon" value="familia">Su Familia
+		<input type="radio" name="viveCon" value="solo"> Solo</label><br><br/>
+		<label>Clave ISSEMYM <input name="clave" type="text" size="10" maxlenght="10"></label><br><br/>
+		<label>Correo electrónico <input name="email" type="text" size="30"></label><br><br/>
+		<label>¿Tiene licencia de manejo?<input type="radio" name="licencia" value="Si"> Si
+										<input type="radio" name="licencia" value="No" checked>No<br><br/><!-- radio botones, que proporcionan
+										opciones mutuamente excluyentes para escoger solamente una, el check representa el valor
+										predeterminado seleccionado cuando se abre el formulario-->
+		<label>Registro Federal de Contribuyentes <input name="rfc" type="text" size="20"></label><br><br/>
+		<label>¿Cómo considera su estado de salud actual? <select name="eSalud">
+							<option value="Buena">Buena</option>
+							<option value="regular">Regular</option>
+							<option value="malo">Malo</option>
+							</select><br><br/>
+		<label>¿Padece alguna enfermedad crónica?<select name="enfermedad">
+							<option value="Si">Si</option>
+							<option value="No">No</option>
+							<option value="cual">¿Cuál?</option>
+							</select><br><br/>
+		<label>¿Qué deporte práctica?<input name="deporte" type="text" size="20"></label><br><br/>
+		<label>¿Pertenece a algún club social o deportivo?<input type="radio" name="club" value="Si"> Si
+										<input type="radio" name="club" value="No" checked>No<br><br/>
+		
+		<label>¿Cuál es su meta en la vida? <input name="meta" type="text" size="30"></label><br><br/>
+		<em>DATOS FAMILIARES</em><br></br>
+		<table > <!-- inicio de una tabla para contener los datos los <tr> corresponden a las filas y los <td> a cada columna--> 
+					<tr> 
+						<td><em>Nombre</em></td> 
+						<td><em>Vive</em></td> 
+						<td><em>Finado</em></td> 
+						<td><em>Domicilio</em></td>
+						<td><em>Ocupación</em></td>						
+					</tr> 
+					<tr> 
+						<td><b>Padre</b></td> 
+						<td><select name="vive">
+							<option value="Si">Si</option>
+							<option value="No">No</option></td> 
+						<td><input name="finado" type="text" size="20"></td> 
+						<td><input name="domicilio" type="text" size="20"></td>
+						<td><input name="ocupacion" type="text" size="20"></td>						
+					</tr> 
+					<tr> 
+						<td><b>Madre</b></td> 
+						<td><select name="vive">
+							<option value="Si">Si</option>
+							<option value="No">No</option></td> 
+						<td><input name="finado" type="text" size="20"></td> 
+						<td><input name="domicilio" type="text" size="20"></td>
+						<td><input name="ocupacion" type="text" size="20"></td>						
+					</tr> 
+					<tr> 
+						<td><b>Esposa(o)</b></td> 
+						<td><select name="vive">
+							<option value="Si">Si</option>
+							<option value="No">No</option></td> 
+						<td><input name="finado" type="text" size="20"></td> 
+						<td><input name="domicilio" type="text" size="20"></td>
+						<td><input name="ocupacion" type="text" size="20"></td>						
+					</tr> 
+					<tr> 
+						<td><b>Nombre Hija(o)</b></td> 
+						<td><select name="vive">
+							<option value="Si">Si</option>
+							<option value="No">No</option></td> 
+						<td><input name="finado" type="text" size="20"></td> 
+						<td><input name="domicilio" type="text" size="20"></td>
+						<td><input name="ocupacion" type="text" size="20"></td>						
+					</tr> 
+	
+</html>
